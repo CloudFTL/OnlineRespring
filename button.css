@@ -1,0 +1,92 @@
+@import "bourbon";
+
+$button-height: 50px;
+$button-width: 160px;
+$button-spacing: 15px;
+$button-transition-speed: 0.25s;
+
+.button-row {
+  @include display(inline-flex);
+  
+  > div {
+    position: relative;
+    width: $button-width;
+    height: $button-height;
+    margin: 0 $button-spacing;
+    @include perspective(1000px);
+
+    > a {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      @include transform-style(preserve-3d);
+      @include transform(
+        translateZ(-($button-height / 2))
+      );
+      @include transition(
+        transform $button-transition-speed
+      );
+
+      &::before, &::after {
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: $button-width;
+        height: $button-height;
+        position: absolute;
+        border: 5px solid black;
+        box-sizing: border-box;
+        content: attr(title);
+        @include display(flex);
+      }
+
+      &::before {
+        background-color: #000;
+        color: #fff;
+        @include transform(
+          rotateY(0deg)
+          translateZ($button-height / 2)
+        );
+      }
+
+      &::after {
+        background-color: #fff;
+        border-color: #000;
+        color: #000;
+        @include transform(
+          rotateX(90deg)
+          translateZ($button-height / 2)
+        );
+      }
+
+      &:hover {
+        @include transform(
+          translateZ(-($button-height / 2)) 
+          rotateX(-90deg)
+        )
+      }
+    }
+  }
+}
+
+/* this is just icing */
+body {
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.main, h1 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include display(flex);
+}
+
+html, body, .main {
+  height: 100%;
+}
