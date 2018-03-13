@@ -1,5 +1,5 @@
 # OnlineRespring
-A Online iOS Respring for ios 11.2.5 and below
+A Online iOS Respring For iOS 11.2.5 And iOS 9.3.5
 
 # Which Firmwares Are Affected
 
