@@ -55,99 +55,17 @@ function myFunction() {
 <br/><br/><br/><div id="execute">Check out some other browser exploits</div></left>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
  <script>
- function nightModeF() {
-   $('p').css({"color":"#C5B999"});
-   $('.content-inner').css({"background-color":"#372218"});
-   $('.content').css({"background-color":"#372218"});
-   $('#header').css({"background-color":"#3D0089"});
- }
- function dayModeF() {
-   $('p').css({"color":"#454545"});
-   $('.content-inner').css({"background-color":"#f8f4f2"});
-   $('.content').css({"background-color":"#f8f4f2"});
-   $('#header').css({"background-color":"#ffab48"});
- }
- </script>
- <style type="text/css">
- .nightmode {
-     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #471b47), color-stop(1, #000000) );
-     background:-moz-linear-gradient( center top, #471b47 5%, #000000 100% );
-     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#471b47', endColorstr='#000000');
-     background-color:#471b47;
-     -webkit-border-top-left-radius:4px;
-     -moz-border-radius-topleft:4px;
-     border-top-left-radius:4px;
-     -webkit-border-top-right-radius:4px;
-     -moz-border-radius-topright:4px;
-     border-top-right-radius:4px;
-     -webkit-border-bottom-right-radius:4px;
-     -moz-border-radius-bottomright:4px;
-     border-bottom-right-radius:4px;
-     -webkit-border-bottom-left-radius:4px;
-     -moz-border-radius-bottomleft:4px;
-     border-bottom-left-radius:4px;
-     text-indent:0;
-     border:1px solid #471b47;
-     display:inline-block;
-     color:#cfba93;
-     font-family:Arial;
-     font-size:15px;
-     font-weight:regular;
-     font-style:normal;
-     height:40px;
-     line-height:40px;
-     width:100px;
-     text-decoration:none;
-     text-align:center;
- }
- .nightmode:hover {
-     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #000000), color-stop(1, #000000) );
-     background:-moz-linear-gradient( center top, #000000 5%, #000000 100% );
-     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000');
-     background-color:#000000;
- }.nightmode:active {
-     position:relative;
-     top:1px;
- }</style>
- <style type="text/css">
- .daymode {
-     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f8f4f2), color-stop(1, #ffffff) );
-     background:-moz-linear-gradient( center top, #f8f4f2 5%, #ffffff 100% );
-     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f4f2', endColorstr='#ffffff');
-     background-color:#f8f4f2;
-     -webkit-border-top-left-radius:4px;
-     -moz-border-radius-topleft:4px;
-     border-top-left-radius:4px;
-     -webkit-border-top-right-radius:4px;
-     -moz-border-radius-topright:4px;
-     border-top-right-radius:4px;
-     -webkit-border-bottom-right-radius:4px;
-     -moz-border-radius-bottomright:4px;
-     border-bottom-right-radius:4px;
-     -webkit-border-bottom-left-radius:4px;
-     -moz-border-radius-bottomleft:4px;
-     border-bottom-left-radius:4px;
-     text-indent:0;
-     border:1px solid #f8f4f2;
-     display:inline-block;
-     color:#cfba93;
-     font-family:Arial;
-     font-size:15px;
-     font-weight:regular;
-     font-style:normal;
-     height:40px;
-     line-height:40px;
-     width:100px;
-     text-decoration:none;
-     text-align:center;
- }
- .daymode:hover {
-     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #ffffff) );
-     background:-moz-linear-gradient( center top, #000000 5%, #ffffff 100% );
-     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff');
-     background-color:#ffffff;
- }.daymode:active {
-     position:relative;
-     top:1px;
- }</style>				</div>
+ <button onclick="dark()">Switch color</button>
+    
+    
+    <script>
+    function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
 
+                document.body.style.backgroundColor = '#333';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+        }
+    }
+    </script>
