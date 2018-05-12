@@ -1,13 +1,17 @@
 <html>
 <head>
-	<style type="text/css">
-		body {
-			background-color: white;
-			transition: background-color 7s;
-		}
-	</style>
-</head>
-<body>
+<body id="body" class="dark-mode">
+  <h1>Dark Mode</h1>
+   
+  <button type="button" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛</button>
+  
+  <p>Activate Dark Mode</p>
+function toggleDarkLight() {
+  var body = document.getElementById("body");
+  var currentClass = body.className;
+  body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
+}
+     <link type="text/css" rel="stylesheet" href="stylesheets/main.css"/>
 	
 </body>
 </html>
@@ -24,7 +28,7 @@
 								<p>Select A Exploit</p>
 							</header>
 							<footer> <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/SlowDownMyDevice.plist" class="button circled scrolly" onclick="change()">Hang ME</a>
-								<a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring000.plist" class="button circled scrolly" onclick="change()">Run The Main Exploit</a>
+								<a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring000.plist" class="button circled scrolly" onclick="change()">Run The 000 Exploit</a>
 					            </footer>  <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring10.plist" class="button circled scrolly" onclick="change()">Run The Blake Exploit</a> 
 				        <center><br/><br/><br/> <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring.plist" class="button circled scrolly" onclick="change()">Run The Main Exploit</a>
 <br/><br/><br/><div id="execute">Exploits Made By CloudFTL Enjoy 
