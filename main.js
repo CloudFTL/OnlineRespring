@@ -1,9 +1,5 @@
-$('#mode').change(function() {
-
-  if ($(this).prop('checked')) {
-    $('body').addClass('dark-mode');
-  } else {
-    $('body').removeClass('dark-mode');
-  }
-
-});
+function toggleDarkLight() {
+  var body = document.getElementById("body");
+  var currentClass = body.className;
+  body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
+}
