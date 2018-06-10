@@ -1,58 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head >
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body style="background-color: rgb(255, 255, 255)">
-    <p>DarkMode!</p>
-    <button onclick="dark()">Switch color</button>
-    
-    
-    <script>
-    function dark() {
-        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
-
-                document.body.style.backgroundColor = '#333';
-        }
-        else {
-                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
-        }
+<!DOCTYPE html>  
     }
-    </script>
-    
-</body>
-</html>
-<html>
-<head>	
-</body>
-</html>
-
-document.body.style.backgroundColor = sessionStorage.getItem('bg');
-document.body.style.color = sessionStorage.getItem('cc');
-function darker() {
-     if ( sessionStorage.getItem('bg') === 'rgb(255, 255, 255)') {
-         
-            sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
-            sessionStorage.setItem('cc', '#777');
-            
-         
-     }
-    else if (sessionStorage.getItem('bg') == null || undefined) {
-        sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
-        sessionStorage.setItem('cc', '#777');
-        
-    }
-    else if( sessionStorage.getItem('bg') === 'rgb(6, 23, 37)') {
-        
-        sessionStorage.setItem('bg', 'rgb(255, 255, 255)');
-        sessionStorage.setItem('cc', '#333');
-        
-  
-    }
-
-document.body.style.backgroundColor = sessionStorage.getItem('bg');
-document.body.style.color = sessionStorage.getItem('cc');
 
 }
 <html>
