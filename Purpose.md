@@ -14,3 +14,5 @@ Press and hold on a exploit then click copy
 once you have copied the exploit you wanna send paste the link in a imessage chat
 then wait for your victim to click it ;)
 
+![alt text](screenshots/EGU.gif "000"
+
