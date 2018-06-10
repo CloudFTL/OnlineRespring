@@ -1,14 +1,13 @@
-// This script sets OSName variable as follows:
-// "Windows"    for all versions of Windows
-// "MacOS"      for all versions of Macintosh OS
-// "Linux"      for all versions of Linux
-// "UNIX"       for all other UNIX flavors 
-// "Unknown OS" indicates failure to detect the OS
+function iOSversion() {
+  if (/iP(hone|od|ad)/.test(navigator.platform)) {
+    // supports iOS 2.0 and later: <http://bit.ly/TJjs1V>
+    var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+    return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
+  }
+}
 
-var OSName="Unknown OS";
-if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
-if (navigator.appVersion.indexOf("Mac")!=-1) OSName="iOS/MacOS";
-if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
-if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+ver = iOSversion();
 
-document.write('Your OS: '+OSName);
+if (ver[0] >= 5) {
+  alert('This is running iOS 11 Right i hope so.');
+}
