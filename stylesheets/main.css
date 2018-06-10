@@ -1,0 +1,21 @@
+/* The original styles */
+h1 {
+    color: blue;
+}
+p {
+    color: green;
+}
+
+/* Dark Mode styles */
+body.dark-mode {
+    background: black;
+}
+.dark-mode label {
+    color: white;
+}
+.dark-mode h1 {
+    color: yellow;
+}
+.dark-mode p {
+    color: orange;
+}
