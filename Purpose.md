@@ -6,3 +6,11 @@ This site can be used on slow wifi as well as slow lte data because it's just a 
 # How To Prank Your Friends 
 
 ![alt text](screenshots/IMG_E0058.JPG "PrankExapme")
+Go To http://cloudftl.github.io/OnlineRespring  
+Press and hold on a exploit then click copy
+
+![alt text](screenshots/IMG_E0059.JPG "HowTo")
+
+once you have copied the exploit you wanna send paste the link in a imessage chat
+then wait for your victim to click it ;)
+
