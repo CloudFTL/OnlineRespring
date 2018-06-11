@@ -1,8 +1,8 @@
-# Version 1.0 (Changes)
+# Version 2.0 (Changes)
 
 • Removed Crash Firefox Button (To Free Up Space)
 
-• Added Pretty Background
+• Site Clean Up
 
 • Added OS Detection
 
@@ -12,20 +12,14 @@
 
 • Faster Exploits
 
+• No More Clutter
 
-# Planned For Version 2.0
+• Clean Design
 
-• Dark Mode Switch
+Version 2.0 Made By @YannickBo And @CloudFTL
 
-• iOS 12 Support
+(Dark Mode Indevelopment)
 
-• Cleaner Interface 
 
-• More Exploits For Lower iOS Firmwares
 
-• Jailbreak Button (Maybe)
-
-• No Clutter
-
-Thats All Folks
 
