@@ -8,11 +8,28 @@
 				document.all("execute").innerHTML="IT HAS BEEN DONE!"
 				}
 				var host = "http://github.com/CloudFTL/OnlineRespring";
+				if ((host == window.location.host) && (window.location.protocol != "https:"))
+				window.location.protocol = "https";
+				}
+				function myFunction() {
+				location.reload();
+				}
+				function warning() {
+				var reply;
+				if (confirm("Are you sure about that?\nThis could permanently damage your device!")) {
+				document.getElementById("tohide").style.display="none";
+				document.getElementById("toshow").style.display="block";
+				reply = 'You can now run the exploits!';
+				} else {
+				reply = "You have to confirm that you know the risk!";
+				}
+				document.getElementById("execute").innerHTML = reply;
 				}
 			</script>
 			<style>
+			@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates');
 			body {
-			font-family: 'Roboto', sans-serif;
+			font-family: 'Montserrat Alternates', sans-serif;
 			}
 			.dm {
 			background-color: #333333;
@@ -21,7 +38,8 @@
 			color: #FFFFFF;
 			cursor: pointer;
 			display: inline;
-			font-size: 16px;
+			float: right;
+			font-size: 14px;
 			padding: 10px 20px;
 			text-align: left;
 			text-decoration: none;
@@ -41,7 +59,7 @@
 			padding: 10px 20px;
 			text-align: left;
 			text-decoration: none;
-			width: 150px;
+			width: 180px;
 			}
 			.b1:hover {
 			background-color: #007700;
@@ -57,7 +75,7 @@
 			padding: 10px 20px;
 			text-align: left;
 			text-decoration: none;
-			width: 150px;
+			width: 180px;
 			}
 			.b2:hover {
 			background-color: #007700;
@@ -139,23 +157,34 @@
 	<!-- revised by 丫 -->
 	<body>
 		<div>
-			<h1>OnlineRespring <a href="dark.html" class="dm">Dark mode</a></h1>
+			<h1>OnlineRespring<a href="dark.html" class="dm">Dark mode</a></h1>
 			<br><br>
 			<h3>Select a Exploit</h3>
-			<a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/SlowDownMyDevice.plist" class="b1" onclick="change()">Hang ME</a>
-			<a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring000.plist" class="b1" onclick="change()">Run The 000 Exploit</a>
-			<a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring10.plist" class="b2" onclick="change()">Run The Blake Exploit</a>
-			<br><br><br>
-			<center><a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring.plist" class="b3" onclick="change()">Run The Main Exploit</a>
-			<br><br><br>
-			<div id="execute">Exploits Made By CloudFTL Enjoy</div>
-			<a class=b4 href="https://github.com/CloudFTL">GitHub</a>
-			<a class=b5 href="https://twitter.com/CloudFTL">Twitter</a>
-			<a class=b6 href="https://youtube.com/CloudFTL">YouTube</a>
-			<br><br>
-			<a class=b7 onclick="myFunction()">Reload page</a>
-			<br><br>
-			<script type="text/javascript" src="detect.js"></script>
+			<div id="tohide">
+				<a class="b1" onclick="warning()">Hang ME</a>
+				<a class="b1" onclick="warning()">Run The 000 Exploit</a>
+				<a class="b2" onclick="warning()">Run The Blake Exploit</a>
+				<br><br><br>
+				<center><a class="b3" onclick="warning()">Run The Main Exploit</a></center>
+			</div>
+			<div id="toshow" style="display:none">
+				<a class="b1" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/SlowDownMyDevice.plist">Hang ME</a>
+				<a class="b1" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring000.plist">Run The 000 Exploit</a>
+				<a class="b2" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring10.plist">Run The Blake Exploit</a>
+				<br><br><br>
+				<center><a class="b3" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring.plist">Run The Main Exploit</a></center>
+			</div>
+			<center>
+				<br><br><br>
+				<div id="execute">Exploits Made By CloudFTL Enjoy</div>
+				<a class=b4 href="https://github.com/CloudFTL">GitHub</a>
+				<a class=b5 href="https://twitter.com/CloudFTL">Twitter</a>
+				<a class=b6 href="https://youtube.com/CloudFTL">YouTube</a>
+				<br><br>
+				<a class=b7 onclick="myFunction()">Reload page</a>
+				<br><br>
+				<script type="text/javascript" src="detect.js"></script>
+			</center>
 		</div>
 	</body>
 </html>
