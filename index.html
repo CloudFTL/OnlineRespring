@@ -59,7 +59,7 @@
 			padding: 10px 20px;
 			text-align: left;
 			text-decoration: none;
-			width: 180px;
+			width: 210px;
 			}
 			.b1:hover {
 			background-color: #007700;
@@ -75,7 +75,7 @@
 			padding: 10px 20px;
 			text-align: left;
 			text-decoration: none;
-			width: 180px;
+			width: 210px;
 			}
 			.b2:hover {
 			background-color: #007700;
@@ -174,7 +174,7 @@
 			<br><br>
 			<h3>Select a Exploit</h3>
 			<div id="tohide">
-				<a class="b1" onclick="warning()">Hang ME</a>
+				<a class="b1" onclick="warning()">Run The Hang ME Exploit</a>
 				<a class="b1" onclick="warning()">Run The 000 Exploit</a>
 				<a class="b2" onclick="warning()">Run The Blake Exploit</a>
 				<br><br><br>
@@ -184,14 +184,27 @@
 				</center>
 			</div>
 			<div id="toshow" style="display:none">
-				<a class="b1" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/SlowDownMyDevice.plist">Hang ME</a>
+				<a class="b1" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/SlowDownMyDevice.plist">Run The Hang ME Exploit</a>
 				<a class="b1" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring000.plist">Run The 000 Exploit</a>
 				<a class="b2" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring10.plist">Run The Blake Exploit</a>
 				<br><br><br>
 				<center>
 					<a class="b3" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring.plist">Run The Main Exploit</a>
 					<br><br>
-					<a class=b4 href="./addtohomescreen.html">Create a shortcut for the Main Exploit on the home screen</a>
+					<a class="b4">
+						Here you can choose a exploit to add it to your home screen:
+						<select size="1" name="jumpit" onchange="document.location.href=this.value"> 
+							<option selected value="">select option</option>
+							<option value="addtohomescreen/addtohomescreenhangmebright.html">Hang ME (Bright mode)</option>
+							<option value="addtohomescreen/addtohomescreenhangmedark.html">Hang ME (Dark mode)</option>
+							<option value="addtohomescreen/addtohomescreen000bright.html">000 (Bright mode)</option>
+							<option value="addtohomescreen/addtohomescreen000dark.html">000 (Dark mode)</option>
+							<option value="addtohomescreen/addtohomescreenblakebright.html">Blake (Bright mode)</option>
+							<option value="addtohomescreen/addtohomescreenblakedark.html">Blake (Dark mode)</option>
+							<option value="addtohomescreen/addtohomescreenmainbright.html">Main (Bright mode)</option>
+							<option value="addtohomescreen/addtohomescreenmaindark.html">Main (Dark mode)</option>
+						</select>
+					</a>
 				</center>
 			</div>
 			<center>
