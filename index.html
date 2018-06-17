@@ -26,6 +26,11 @@
 			}
 			document.getElementById("execute").innerHTML = reply;
 			}
+			function toggledarkmode() {
+			var body = document.getElementById("tdm");
+			var currentClass = body.className;
+			body.className = currentClass == "dm" ? "bm" : "dm";
+			}
 		</script>
 		<style>
 			@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates");
@@ -37,22 +42,6 @@
 			}
 			::-moz-selection {
 			background: #555555;
-			}
-			.dm {
-			background-color: #333333;
-			border: 1px solid #000000;
-			border-radius: 4px;
-			color: #FFFFFF;
-			cursor: pointer;
-			display: inline;
-			float: right;
-			font-size: 14px;
-			padding: 10px 20px;
-			text-align: left;
-			text-decoration: none;
-			}
-			.dm:hover {
-			background-color: #000000;
 			}
 			.b1 {
 			background-color: #33AA33;
@@ -188,11 +177,45 @@
 			width:70%;
 			}
 			}
+			.tm {
+			border-radius: 4px;
+			cursor: pointer;
+			display: inline;
+			float: right;
+			font-size: 14px;
+			padding: 10px 20px;
+			text-align: right;
+			text-decoration: none;
+			}
+			body.bm {
+			background-color: #FFFFFF;
+			color: #000000;
+			}
+			body.bm a[class="tm"] {
+			background-color: #333333;
+			border: 1px solid #000000;
+			color: #FFFFFF;
+			}
+			body.bm a[class="tm"]:hover {
+			background-color: #000000;
+			}
+			body.dm {
+			background-color: #111111;
+			color: #FFFFFF;
+			}
+			body.dm a[class="tm"] {
+			background-color: #FFFFFF;
+			border: 1px solid #CCCCCC;
+			color: #000000;
+			}
+			body.dm a[class="tm"]:hover {
+			background-color: #CCCCCC;
+			}
 		</style>
 	</head>
-	<body>
+	<body id="tdm" class="bm">
 		<div>
-			<h1>OnlineRespring<a href="dark.html" class="dm">Dark mode</a></h1>
+			<h1>OnlineRespring<a class="tm" onclick="toggledarkmode()">toggle dark mode</a></h1>
 			<br><br>
 			<h3>Select a Exploit</h3>
 			<div id="tohide">
@@ -217,14 +240,14 @@
 						Here you can choose a exploit to add it to your home screen:
 						<select onchange="document.location.href=this.value"> 
 							<option selected value="">select option</option>
-							<option value="addtohomescreen/addtohomescreenhangmebright.html">Hang ME (Bright mode)</option>
-							<option value="addtohomescreen/addtohomescreenhangmedark.html">Hang ME (Dark mode)</option>
-							<option value="addtohomescreen/addtohomescreen000bright.html">000 (Bright mode)</option>
-							<option value="addtohomescreen/addtohomescreen000dark.html">000 (Dark mode)</option>
-							<option value="addtohomescreen/addtohomescreenblakebright.html">Blake (Bright mode)</option>
-							<option value="addtohomescreen/addtohomescreenblakedark.html">Blake (Dark mode)</option>
-							<option value="addtohomescreen/addtohomescreenmainbright.html">Main (Bright mode)</option>
-							<option value="addtohomescreen/addtohomescreenmaindark.html">Main (Dark mode)</option>
+							<option value="addtohomescreen/addtohomescreenhangmebright.html">Hang ME (bright mode)</option>
+							<option value="addtohomescreen/addtohomescreenhangmedark.html">Hang ME (dark mode)</option>
+							<option value="addtohomescreen/addtohomescreen000bright.html">000 (bright mode)</option>
+							<option value="addtohomescreen/addtohomescreen000dark.html">000 (dark mode)</option>
+							<option value="addtohomescreen/addtohomescreenblakebright.html">Blake (bright mode)</option>
+							<option value="addtohomescreen/addtohomescreenblakedark.html">Blake (dark mode)</option>
+							<option value="addtohomescreen/addtohomescreenmainbright.html">Main (bright mode)</option>
+							<option value="addtohomescreen/addtohomescreenmaindark.html">Main (dark mode)</option>
 						</select>
 					</div>
 				</center>
