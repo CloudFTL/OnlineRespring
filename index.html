@@ -32,6 +32,12 @@
 			body {
 			font-family: 'Montserrat Alternates', sans-serif;
 			}
+			::selection {
+			background: #555555;
+			}
+			::-moz-selection {
+			background: #555555;
+			}
 			.dm {
 			background-color: #333333;
 			border: 1px solid #000000;
@@ -92,26 +98,12 @@
 			padding: 15px 32px;
 			text-align: center;
 			text-decoration: none;
-			width: 25%;
+			width: 50%;
 			}
 			.b3:hover {
 			background-color: #770000;
 			}
 			.b4 {
-			background-color: #AA0000;
-			border: 1px solid #770000;
-			color: #FFFFFF;
-			cursor: pointer;
-			display: inline-block;
-			font-size: 14px;
-			padding: 5px 10px;
-			text-align: center;
-			text-decoration: none;
-			}
-			.b4:hover {
-			background-color: #770000;
-			}
-			.b5 {
 			background-color: #333333;
 			border: 1px solid #000000;
 			color: #FFFFFF;
@@ -122,10 +114,10 @@
 			text-align: center;
 			text-decoration: none;
 			}
-			.b5:hover {
+			.b4:hover {
 			background-color: #000000;
 			}
-			.b6 {
+			.b5 {
 			background-color: #1DA1F2;
 			border: 1px solid #0077CC;
 			color: #FFFFFF;
@@ -136,10 +128,10 @@
 			text-align: center;
 			text-decoration: none;
 			}
-			.b6:hover {
+			.b5:hover {
 			background-color: #0077CC;
 			}
-			.b7 {
+			.b6 {
 			background-color: #FF0000;
 			border: 1px solid #CC0000;
 			color: #FFFFFF;
@@ -150,10 +142,10 @@
 			text-align: center;
 			text-decoration: none;
 			}
-			.b7:hover {
+			.b6:hover {
 			background-color: #CC0000;
 			}
-			.b8 {
+			.b7 {
 			background-color: #AAAAAA;
 			border: 1px solid #777777;
 			color: #FFFFFF;
@@ -164,8 +156,28 @@
 			text-align: center;
 			text-decoration: none;
 			}
-			.b8:hover {
+			.b7:hover {
 			background-color: #777777;
+			}
+			.s {
+			background-color: #0000AA;
+			border: 1px solid #000077;
+			color: #FFFFFF;
+			display: inline-block;
+			padding: 5px 10px;
+			width:45%;
+			}
+			.s select {
+			background-color: #0000AA;
+			border: 1px solid #000077;
+			color: #FFFFFF;
+			cursor: pointer;
+			display: inline-block;
+			font-family: 'Montserrat Alternates', sans-serif;
+			font-size: 16px;
+			text-decoration: underline;
+			width:30px
+			-webkit-appearance: none;
 			}
 		</style>
 	</head>
@@ -192,9 +204,9 @@
 				<center>
 					<a class="b3" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring.plist">Run The Main Exploit</a>
 					<br><br>
-					<a class="b4">
+					<div class="s">
 						Here you can choose a exploit to add it to your home screen:
-						<select size="1" name="jumpit" onchange="document.location.href=this.value"> 
+						<select onchange="document.location.href=this.value"> 
 							<option selected value="">select option</option>
 							<option value="addtohomescreen/addtohomescreenhangmebright.html">Hang ME (Bright mode)</option>
 							<option value="addtohomescreen/addtohomescreenhangmedark.html">Hang ME (Dark mode)</option>
@@ -205,17 +217,17 @@
 							<option value="addtohomescreen/addtohomescreenmainbright.html">Main (Bright mode)</option>
 							<option value="addtohomescreen/addtohomescreenmaindark.html">Main (Dark mode)</option>
 						</select>
-					</a>
+					</div>
 				</center>
 			</div>
 			<center>
 				<br><br><br>
 				<div id="execute">Made By CloudFTL & ΛZYКĿΞ</div>
-				<a class=b5 href="https://github.com/CloudFTL">GitHub</a>
-				<a class=b6 href="https://twitter.com/CloudFTL">Twitter</a>
-				<a class=b7 href="https://youtube.com/CloudFTL">YouTube</a>
+				<a class=b4 href="https://github.com/CloudFTL">GitHub</a>
+				<a class=b5 href="https://twitter.com/CloudFTL">Twitter</a>
+				<a class=b6 href="https://youtube.com/CloudFTL">YouTube</a>
 				<br><br>
-				<a class=b8 onclick="myFunction()">Reload page</a>
+				<a class=b7 onclick="myFunction()">Reload page</a>
 				<br><br>
 				<script type="text/javascript" src="detect.js"></script>
 			</center>
