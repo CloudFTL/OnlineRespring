@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>	
 		<title>OnlineRespring</title>
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="apple-touch-icon-precomposed" href="addtohomescreen/iconbright.jpg">
+		<link rel="icon" type="image/jpg" href="addtohomescreen/icon.jpg">
 		<script language="javascript">
 			function change() {
 			document.all("execute").innerHTML="IT HAS BEEN DONE!"
@@ -30,6 +32,13 @@
 			var body = document.getElementById("tdm");
 			var currentClass = body.className;
 			body.className = currentClass == "dm" ? "bm" : "dm";
+			var button = document.getElementById("bt").innerHTML
+			if (button == "dark mode") {
+			document.getElementById("bt").innerHTML = "bright mode"
+			}
+			else {
+			document.getElementById("bt").innerHTML = "dark mode"
+			}
 			}
 		</script>
 		<style>
@@ -174,7 +183,7 @@
 			}
 			.s {
 			padding: 5px 10px;
-			width:70%;
+			width: 70%;
 			}
 			}
 			.tm {
@@ -186,6 +195,7 @@
 			padding: 10px 20px;
 			text-align: right;
 			text-decoration: none;
+			width: 89px;
 			}
 			body.bm {
 			background-color: #FFFFFF;
@@ -215,7 +225,7 @@
 	</head>
 	<body id="tdm" class="bm">
 		<div>
-			<h1>OnlineRespring<a class="tm" onclick="toggledarkmode()">toggle dark mode</a></h1>
+			<h1>OnlineRespring<a id="bt" class="tm" onclick="toggledarkmode()">dark mode</a></h1>
 			<br><br>
 			<h3>Select a Exploit</h3>
 			<div id="tohide">
