@@ -30,15 +30,16 @@
 			document.getElementById("execute").innerHTML = reply;
 			}
 			function toggledarkmode() {
-			var body = document.getElementById("tdm");
-			var currentClass = body.className;
-			body.className = currentClass == "dm" ? "bm" : "dm";
 			var button = document.getElementById("bt").innerHTML
 			if (button == "dark mode") {
-			document.getElementById("bt").innerHTML = "bright mode"
+			document.getElementById("tdm").className  = "dm"
+			document.getElementById("bt").innerHTML = "bright mode";
+			localStorage.setItem("last used mode", "dark mode");
 			}
 			else {
-			document.getElementById("bt").innerHTML = "dark mode"
+			document.getElementById("tdm").className  = "bm"
+			document.getElementById("bt").innerHTML = "dark mode";
+			localStorage.setItem("last used mode", "bright mode");
 			}
 			}
 		</script>
@@ -231,6 +232,15 @@
 	<body id="tdm" class="bm">
 		<div>
 			<h1>OnlineRespring<a id="bt" class="tm" onclick="toggledarkmode()">dark mode</a></h1>
+			<script>
+				var colour = localStorage.getItem("last used mode");
+				if (colour == "dark mode") {
+				document.getElementById("tdm").className  = "dm"
+				document.getElementById("bt").innerHTML = "bright mode";
+				}
+				else {
+				}
+			</script>
 			<br><br>
 			<h3>Select a Exploit</h3>
 			<div id="tohide">
