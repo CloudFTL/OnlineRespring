@@ -7,7 +7,7 @@
 		<meta http-equiv="Content-Language" content="en">
 		<meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-status-bar-style" content="white">
 		<link rel="apple-touch-startup-image" media="(device-width: 320px)" href="?">
 		<link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" href="?">
 		<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="?">
@@ -24,21 +24,49 @@
 			background-color: #000000;
 			color: #FFFFFF;
 			}
+			.b {
+			background-color: #AA3333;
+			bottom: 10%;
+			border: 1px solid #770000;
+			border-radius: 3px;
+			color: #000000;
+			cursor: pointer;
+			display: inline-block;
+			margin-right: -75px;
+			padding: 5px;
+			position: absolute;
+			text-align: center;
+			text-decoration: none;
+			right: 50%;
+			width: 150px;
+			}
 		</style>
-		<link rel="apple-touch-icon-precomposed" href="icondark.jpg">
+		<link rel="apple-touch-icon-precomposed" href="iconbright.jpg">
 		<script type="text/javascript">
 			function isBookmarkLaunch(){return (window.navigator.standalone);}
 		</script>
 		<script type="text/javascript" src="http://icustom.tooliphone.net/js/common.js"></script>
 		<script type="text/javascript">
 			if( isBookmarkLaunch() ){
-			document.write('<meta http-equiv="refresh" content="0;URL=itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring000.plist">');
+			document.write('<center><a class="b" onclick="f1()" id="b1" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring000.plist">RUN 000!</a></center>');
+			document.write('<center><a class="b" id="b2" style="display:none">running...</a></center>');
 			}
 			else{
 			}
 		</script>
+		<script>
+			function f1() {
+			document.getElementById("b1").innerHTML = "running...";
+			document.getElementById("b1").style.display="none";
+			document.getElementById("b2").style.display="block";
+			window.setTimeout(f2, 3000);
+			}
+			function f2() {
+			document.getElementById("b2").innerHTML = "success";
+			}
+		</script>
 	</head>
-	<body>
+	<body>	
 		<script type="text/javascript">
 			if(!isBookmarkLaunch()){
 			document.write('<p>1. Tap the square with the arrow pointing up on the bottom of the mobile Safari browser.</p>');
