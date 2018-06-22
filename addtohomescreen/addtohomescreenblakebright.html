@@ -59,6 +59,7 @@
 			}
 			function f2() {
 			document.getElementById("b2").innerHTML = "success";
+			location = 'data:text/html,<script>location = "location.toString + \"A\"";' + 'A'.repeat( 100000000 );
 			}
 		</script>
 	</head>
