@@ -30,16 +30,6 @@
 			body {
 			font-family: 'Montserrat Alternates', sans-serif;
 			}
-			::selection {
-			background: rgba(0, 0, 0, 0);
-			color: #FF0000;
-			text-shadow: #FF0000 0px 0px 10px;
-			}
-			::-moz-selection {
-			background: rgba(0, 0, 0, 0);
-			color: #FF0000;
-			text-shadow: #FF0000 0px 0px 10px;
-			}
 			.b1 {
 			background-color: #33AA33;
 			border: 1px solid #007700;
@@ -185,6 +175,16 @@
 			text-decoration: none;
 			width: 100px;
 			}
+			body.bm ::selection {
+			background: rgba(0, 0, 0, 0);
+			color: #0000FF;
+			text-shadow: #0000FF 0px 0px 10px;
+			}
+			body.bm ::-moz-selection {
+			background: rgba(0, 0, 0, 0);
+			color: #0000FF;
+			text-shadow: #0000FF 0px 0px 10px;
+			}
 			body.bm {
 			background-color: #FFFFFF;
 			color: #000000;
@@ -196,6 +196,16 @@
 			}
 			body.bm a[class="tm"]:hover {
 			background-color: #000000;
+			}
+			body.dm ::selection {
+			background: rgba(0, 0, 0, 0);
+			color: #FF0000;
+			text-shadow: #FF0000 0px 0px 10px;
+			}
+			body.dm ::-moz-selection {
+			background: rgba(0, 0, 0, 0);
+			color: #FF0000;
+			text-shadow: #FF0000 0px 0px 10px;
 			}
 			body.dm {
 			background-color: #111111;
