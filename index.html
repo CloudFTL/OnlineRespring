@@ -284,12 +284,17 @@
 					document.getElementById("tohide").style.display="none";
 					document.getElementById("toshow").style.display="block";
 					var counter = localStorage.getItem("runcount");
-					if (counter == 8) {
+					if (counter >= 8) {
 					localStorage.removeItem("accepted the warning");
 					localStorage.removeItem("runcount");
 					}
 					else {
 					localStorage.runcount = Number(localStorage.runcount)+1;
+					}
+					if (counter == "NaN") {
+					localStorage.setItem("runcount", 8);
+					}
+					else {
 					}
 					}
 					else {
@@ -301,7 +306,7 @@
 					reply = 'You can now run the exploits!';
 					document.getElementById("execute").innerHTML = reply;
 					localStorage.setItem("accepted the warning", "yes");
-					localStorage.setItem("runcount", 0);					
+					localStorage.setItem("runcount", 0);
 					}
 					else {
 					reply = "You have to confirm that you know the risk!";
