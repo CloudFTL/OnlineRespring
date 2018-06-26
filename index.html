@@ -265,38 +265,43 @@
 				<br><br>
 				<a class=b7 onclick="myFunction()">Reload page</a>
 				<br><br>
-				<script type="text/javascript" src="detect.js"></script>
+				<script type="text/javascript">
+					var OSName="Unknown OS";
+					if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+					if (navigator.appVersion.indexOf("Mac")!=-1) OSName="iOS/MacOS";
+					if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+					if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+					document.write('Your OS: '+OSName);
+					var colour = localStorage.getItem("last used mode");
+					if (colour == "dark mode") {
+					document.getElementById("tdm").className  = "dm"
+					document.getElementById("bt").innerHTML = "bright mode";
+					}
+					else {
+					}
+					var confirmed = localStorage.getItem("accepted the warning");
+					if (confirmed == "yes") {
+					document.getElementById("tohide").style.display="none";
+					document.getElementById("toshow").style.display="block";
+					}
+					else {
+					function warning() {
+					var reply;
+					if (confirm("Are you sure about that?\nThis could permanently damage your device!")) {
+					document.getElementById("tohide").style.display="none";
+					document.getElementById("toshow").style.display="block";
+					reply = 'You can now run the exploits!';
+					document.getElementById("execute").innerHTML = reply;
+					localStorage.setItem("accepted the warning", "yes");
+					}
+					else {
+					reply = "You have to confirm that you know the risk!";
+					document.getElementById("execute").innerHTML = reply;
+					}
+					}
+					}
+				</script>
 			</center>
 		</div>
-		<script>
-			var colour = localStorage.getItem("last used mode");
-			if (colour == "dark mode") {
-			document.getElementById("tdm").className  = "dm"
-			document.getElementById("bt").innerHTML = "bright mode";
-			}
-			else {
-			}
-			var confirmed = localStorage.getItem("accepted the warning");
-			if (confirmed == "yes") {
-			document.getElementById("tohide").style.display="none";
-			document.getElementById("toshow").style.display="block";
-			}
-			else {
-			function warning() {
-			var reply;
-			if (confirm("Are you sure about that?\nThis could permanently damage your device!")) {
-			document.getElementById("tohide").style.display="none";
-			document.getElementById("toshow").style.display="block";
-			reply = 'You can now run the exploits!';
-			document.getElementById("execute").innerHTML = reply;
-			localStorage.setItem("accepted the warning", "yes");
-			}
-			else {
-			reply = "You have to confirm that you know the risk!";
-			document.getElementById("execute").innerHTML = reply;
-			}
-			}
-			}
-		</script>
 	</body>
 </html>
