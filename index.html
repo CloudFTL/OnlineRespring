@@ -17,18 +17,6 @@
 			function myFunction() {
 			location.reload();
 			}
-			function warning() {
-			var reply;
-			if (confirm("Are you sure about that?\nThis could permanently damage your device!")) {
-			document.getElementById("tohide").style.display="none";
-			document.getElementById("toshow").style.display="block";
-			reply = 'You can now run the exploits!';
-			}
-			else {
-			reply = "You have to confirm that you know the risk!";
-			}
-			document.getElementById("execute").innerHTML = reply;
-			}
 			function toggledarkmode() {
 			var button = document.getElementById("bt").innerHTML
 			if (button == "dark mode") {
@@ -232,15 +220,6 @@
 	<body id="tdm" class="bm">
 		<div>
 			<h1>OnlineRespring<a id="bt" class="tm" onclick="toggledarkmode()">dark mode</a></h1>
-			<script>
-				var colour = localStorage.getItem("last used mode");
-				if (colour == "dark mode") {
-				document.getElementById("tdm").className  = "dm"
-				document.getElementById("bt").innerHTML = "bright mode";
-				}
-				else {
-				}
-			</script>
 			<br><br>
 			<h3>Select a Exploit</h3>
 			<div id="tohide">
@@ -289,5 +268,35 @@
 				<script type="text/javascript" src="detect.js"></script>
 			</center>
 		</div>
+		<script>
+			var colour = localStorage.getItem("last used mode");
+			if (colour == "dark mode") {
+			document.getElementById("tdm").className  = "dm"
+			document.getElementById("bt").innerHTML = "bright mode";
+			}
+			else {
+			}
+			var confirmed = localStorage.getItem("accepted the warning");
+			if (confirmed == "yes") {
+			document.getElementById("tohide").style.display="none";
+			document.getElementById("toshow").style.display="block";
+			}
+			else {
+			function warning() {
+			var reply;
+			if (confirm("Are you sure about that?\nThis could permanently damage your device!")) {
+			document.getElementById("tohide").style.display="none";
+			document.getElementById("toshow").style.display="block";
+			reply = 'You can now run the exploits!';
+			document.getElementById("execute").innerHTML = reply;
+			localStorage.setItem("accepted the warning", "yes");
+			}
+			else {
+			reply = "You have to confirm that you know the risk!";
+			document.getElementById("execute").innerHTML = reply;
+			}
+			}
+			}
+		</script>
 	</body>
 </html>
