@@ -48,8 +48,8 @@
 			background-color: #007700;
 			}
 			.b2 {
-			background-color: #33AA33;
-			border: 1px solid #007700;
+			background-color: #6600ff;
+			border: 1px solid #3300cc;
 			border-radius: 4px;
 			color: #FFFFFF;
 			cursor: pointer;
@@ -61,7 +61,7 @@
 			width: 210px;
 			}
 			.b2:hover {
-			background-color: #007700;
+			background-color: #3300cc;
 			}
 			.b3 {
 			background-color: #AA3333;
@@ -93,6 +93,20 @@
 			.b4:hover {
 			background-color: #000000;
 			}
+			.b4 {
+			background-color: #333333;
+			border: 1px solid #000000;
+			color: #FFFFFF;
+			cursor: pointer;
+			display: inline-block;
+			font-size: 14px;
+			padding: 5px 10px;
+			text-align: center;
+			text-decoration: none;
+			}
+			.b4:hover {
+			background-color: #000000;
+			}
 			.b5 {
 			background-color: #1DA1F2;
 			border: 1px solid #0077CC;
@@ -100,7 +114,7 @@
 			cursor: pointer;
 			display: inline-block;
 			font-size: 14px;
-			padding: 5px 10px;
+			padding: 5px 1px;
 			text-align: center;
 			text-decoration: none;
 			}
@@ -134,21 +148,6 @@
 			}
 			.b7:hover {
 			background-color: #777777;
-			}
-			.b8 {
-			background-color: #CCAA00;
-			border: 1px solid #AA8800;
-			color: #000000;
-			cursor: pointer;
-			display: inline-block;
-			font-size: 14px;
-			margin: 5px;
-			padding: 5px 10px;
-			text-align: center;
-			text-decoration: none;
-			}
-			.b8:hover {
-			background-color: #AA8800;
 			}
 			.s {
 			background-color: #0000AA;
@@ -239,14 +238,14 @@
 	<body id="tdm" class="bm">
 		<div>
 			<h1>OnlineRespring<a id="bt" class="tm" onclick="toggledarkmode()">dark mode</a></h1>
-			<div id="execute">Main Exploit 11.0-11.2.5</div>
-			<div id="execute">000 HangMe Blake 11.0-12.1</div>
-			<br><br>
+			<br>
 			<h3>Select a Exploit</h3>
 			<div id="tohide">
+				
 				<a class="b1" onclick="warning()">Run The Hang ME Exploit</a>
 				<a class="b1" onclick="warning()">Run The 000 Exploit</a>
-				<a class="b2" onclick="warning()">Run The Blake Exploit</a>
+				<a class="b1" onclick="warning()">Run The Blake Exploit</a>
+				<a class="b2" onclick="warning()">iOS 12 Bug</a>
 				<br><br><br>
 				<center>
 					<a class="b3" onclick="warning()">Run The Main Exploit</a>
@@ -256,7 +255,8 @@
 			<div id="toshow" style="display:none">
 				<a class="b1" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/SlowDownMyDevice.plist">Run The Hang ME Exploit</a>
 				<a class="b1" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring000.plist">Run The 000 Exploit</a>
-				<a class="b2" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring10.plist">Run The Blake Exploit</a>
+				<a class="b1" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring10.plist">Run The Blake Exploit</a>
+				<a class="b2" onclick="change() href="appleprintcenter://">iOS 12 Bug</a>
 				<br><br><br>
 				<center>
 					<a class="b3" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring.plist">Run The Main Exploit</a>
@@ -280,13 +280,25 @@
 			<center>
 				<br><br><br>
 				<div id="execute">Made By CloudFTL & ΛZYКĿΞ</div>
-				<a class=b8 href="https://cdn.rawgit.com/pwnsdx/ce64de2760996a6c432f06d612e33aea/raw/fb78440ee4bce427f0cde98a4e9feadfd9eed198/safari-reaper.html">⚠️iOS 12 Bug⚠️</a>
+				<a> CloudFTL:</a>
 				<br>
 				<a class=b4 href="https://github.com/CloudFTL">GitHub</a>
 				<a class=b5 href="https://twitter.com/CloudFTL">Twitter</a>
 				<a class=b6 href="https://youtube.com/CloudFTL">YouTube</a>
+				<br>
+				<a> ΛZYКĿΞ:</a>
+				<br>
+				<a class=b4 href="https://github.com/Azykle">GitHub</a>
 				<br><br>
 				<a class=b7 onclick="myFunction()">Reload page</a>
+				<br><br>
+				<div>
+					<b>Supported versions:</b>
+					<br>
+					Main Exploit 11.0-11.2.5
+					<br>
+					000 HangMe Blake 11.0-12.1
+				</div>
 				<br><br>
 				<script type="text/javascript">
 					var OSName="Unknown OS";
