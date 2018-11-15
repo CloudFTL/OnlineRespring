@@ -1,0 +1,21 @@
+body {
+background-color: #000000;
+color: #FFFFFF;
+font-family: 'Montserrat Alternates', sans-serif;
+}
+.b {
+background-color: #AA3333;
+bottom: 10%;
+border: 1px solid #770000;
+border-radius: 3px;
+color: #000000;
+cursor: pointer;
+display: inline-block;
+margin-right: -75px;
+padding: 5px;
+position: absolute;
+text-align: center;
+text-decoration: none;
+right: 50%;
+width: 150px;
+}

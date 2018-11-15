@@ -8,71 +8,11 @@
 		<meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="white">
-		<link rel="apple-touch-startup-image" media="(device-width: 320px)" href="?">
-		<link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" href="?">
-		<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="?">
-		<link rel="apple-touch-startup-image" media="(device-width: 768px) and (orientation: portrait)" href="?">
-		<link rel="apple-touch-startup-image" media="(device-width: 768px) and (orientation: landscape)" href="?">
-		<link rel="apple-touch-startup-image" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="?" >
-		<link rel="apple-touch-startup-image" media="(device-width: 1536px)  and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="?">
-		<style>
-			@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates");
-			body {
-			font-family: 'Montserrat Alternates', sans-serif;
-			}
-			.b {
-			background-color: #AA3333;
-			bottom: 10%;
-			border: 1px solid #770000;
-			border-radius: 3px;
-			color: #000000;
-			cursor: pointer;
-			display: inline-block;
-			margin-right: -75px;
-			padding: 5px;
-			position: absolute;
-			text-align: center;
-			text-decoration: none;
-			right: 50%;
-			width: 150px;
-			}
-		</style>
 		<link rel="apple-touch-icon-precomposed" href="iconbright.jpg">
-		<script type="text/javascript">
-			function isBookmarkLaunch(){return (window.navigator.standalone);}
-		</script>
-		<script type="text/javascript" src="http://icustom.tooliphone.net/js/common.js"></script>
-		<script type="text/javascript">
-			if( isBookmarkLaunch() ){
-			document.write('<center><a class="b" onclick="f1()" id="b1" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/SlowDownMyDevice.plist">RUN HANG ME!</a></center>');
-			document.write('<center><a class="b" id="b2" style="display:none">running...</a></center>');
-			}
-			else{
-			}
-		</script>
-		<script>
-			function f1() {
-			document.getElementById("b1").innerHTML = "running...";
-			document.getElementById("b1").style.display="none";
-			document.getElementById("b2").style.display="block";
-			window.setTimeout(f2, 3000);
-			}
-			function f2() {
-			document.getElementById("b2").innerHTML = "success";
-			}
-		</script>
+		<script type="text/javascript" src="hangme.js"></script>
+		<style>@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates");</style>
+		<link rel="stylesheet" href="bright.css">
 	</head>
-	<body>	
-		<script type="text/javascript">
-			if(!isBookmarkLaunch()){
-			document.write('<p>1. Tap the square with the arrow pointing up on the bottom of the mobile Safari browser.</p>');
-			document.write('<p>2. Choose "Add to Home Screen".</p>');
-			document.write('<p>3. Change the icon title if you want, and tap the "Add" button.</p>');
-			}
-			else{
-			var schemeParam = "itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/SlowDownMyDevice.plist";
-			// window.location = schemeParam;
-			}
-		</script>
+	<body>
 	</body>
 </html>
