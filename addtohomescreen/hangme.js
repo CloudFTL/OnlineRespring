@@ -29,5 +29,5 @@ document.getElementById("b2").innerHTML = "retry";
 document.getElementById("b1").innerHTML = "retry";
 document.getElementById("b1").style.display="inline-block";
 document.getElementById("b2").style.display="none";
-document.getElementById("b2").innerHTML = "Running Exploit...";
+document.getElementById("b2").innerHTML = "<3 Check The Plist";
 }
