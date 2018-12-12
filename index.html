@@ -227,12 +227,11 @@
 			<br>
 			<h3>Select a Exploit</h3>
 			<div id="tohide">
-
+				
 				<a class="b1" onclick="warning()">Run The Hang ME Exploit</a>
 				<a class="b1" onclick="warning()">Run The 000 Exploit</a>
 				<a class="b1" onclick="warning()">Run The Blake Exploit</a>
 				<a class="b2" onclick="warning()">iOS 12 Bug</a>
-				<a class="b2" onclick="warning()">Run The Emoji Exploit (TEST)</a>
 				<br><br><br>
 				<center>
 					<a class="b3" onclick="warning()">Run The Main Exploit</a>
@@ -244,7 +243,7 @@
 				<a class="b1" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring000.plist">Run The 000 Exploit</a>
 				<a class="b1" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring10.plist">Run The Blake Exploit</a>
 				<a class="b2" onclick="change()" href="appleprintcenter://">iOS 12 Bug</a>
-				<a class="b1" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respringEMOJI.plist">Run The Emoji Exploit</a>
+				<a class="b1" onclick="change()" href="http://crashfirefox.com">Crash Safari.app</a>
 				<br><br><br>
 				<center>
 					<a class="b3" onclick="change()" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/CloudFTL/OnlineRespring/master/respring.plist">Run The Main Exploit</a>
@@ -280,6 +279,7 @@
 				<br>
 				<a class=b4 href="https://github.com/Azykle">GitHub</a>
 				<br><br>
+				<a class=b7 onclick="myFunction()">Reload page</a>
 				<br><br>
 				<div>
 					<b>Supported versions:</b>
@@ -289,8 +289,6 @@
 					000 HangMe Blake 5.0-12.1
 					<br>
 					iOS 12 Bug 12.0-12.0.1
-					<br>
-					Emoji Exploit 12.0-12.1
 				</div>
 				<br><br>
 				<script type="text/javascript">
@@ -328,7 +326,7 @@
 					else {
 					function warning() {
 					var reply;
-					if (confirm("Are you sure about that?\nThis could permanently damage your device!")) {
+					if (confirm("Are you sure about that?\nThis Has The Potential To Damage Or Brick Your Device")) {
 					document.getElementById("tohide").style.display="none";
 					document.getElementById("toshow").style.display="block";
 					reply = 'You can now run the exploits!';
